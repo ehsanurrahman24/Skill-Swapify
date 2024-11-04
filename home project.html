@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillSwap App</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0d0d18;
+            color: black; 
+        }
+
+        /* Container */
+        .container {
+            width: 80%;
+            margin: 0 auto; 
+        }
+
+        /* Header */
+        header {
+            background-color: #055753;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 50px;
+            padding: 5px;
+        }
+
+        /* Navigation */
+        nav ul {
+            list-style-type: none;
+            padding: 15px 0;
+            display: flex;
+            justify-content: space-around;
+            background-color: #044c24;
+            border: 2px solid black;
+        }
+
+        nav ul li {
+            text-align: center;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            display: block;
+            padding: 10px 0;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 30px 0;
+            text-align: center;
+            background-image: url(picture1.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 50vh;
+        }
+
+        .feature-box {
+            background-color: #dd9653;
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 5px 5px rgb(51, 34, 3);
+        }
+
+        .features .feature-box:hover {
+            background-color: rgb(235, 203, 203);
+        }
+
+        .feature-box h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .feature-box p {
+            font-size: 14px;
+        }
+
+        /* Image Section */
+        .image {
+            margin: 0 auto;
+            padding: 5px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .img1, .img2, .img3 {
+            width: 300px;
+            height: auto;
+            margin: 2px;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+
+        .img1 {
+            animation-name: img-anim;
+        }
+
+        @keyframes img-anim {
+            0% { bottom: 0px; right: 0px; }
+            50% { bottom: 0px; right: 50px; }
+            100% { bottom: 0px; right: 0px; }
+        }
+
+        .img3 {
+            animation-name: img-bnim;
+        }
+
+        @keyframes img-bnim {
+            0% { top: 0px; left: 0px; }
+            50% { top: 0px; left: 50px; }
+            100% { top: 0px; left: 0px; }
+        }
+
+        /* All-cards Section */
+        .all-cards {
+            padding: 2% 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            background-image: url(picture1.jpg);
+        }
+
+        .card {
+            background-color: #555;
+            border-radius: 5px;
+            padding: 10px;
+            transition: 0.3s;
+            height: auto;
+            width: 100%;
+            max-width: 400px;
+            margin: 10px;
+            box-shadow: 0px 10px 10px rgb(2, 82, 98);
+        }
+
+        .card:hover {
+            box-shadow: 0px 10px 10px 10px rgb(2, 82, 98);
+        }
+
+        .img-card1, .img-card2, .img-card3 {
+            width: 100px;
+            height: auto;
+        }
+
+        h2, p {
+            color: aliceblue;
+        }
+
+        /* About Section */
+        .software-section {
+            padding: 60px 20px;
+            background-color: #045870;
+            text-align: center;
+        }
+
+        .container1 {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .h1 {
+            font-size: 2.5em;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .p1 {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #ffffff;
+            margin-bottom: 40px;
+        }
+
+        /* Responsive Styling */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 36px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                padding: 0;
+            }
+
+            nav ul li a {
+                padding: 10px;
+                font-size: 18px;
+            }
+
+            .features {
+                height: auto;
+                padding: 20px;
+            }
+
+            .feature-box {
+                width: 90%;
+                margin: 10px auto;
+            }
+
+            .image {
+                flex-direction: column;
+            }
+
+            .all-cards {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 28px;
+            }
+
+            nav ul li a {
+                font-size: 16px;
+            }
+
+            .img1, .img2, .img3 {
+                width: 100%;
+            }
+
+            .img-card1, .img-card2, .img-card3 {
+                width: 80px;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1>SkillSwapify</h1>
+            <nav>
+                <ul>
+                    <li><a href="home project.html">Home</a></li>
+                    <li><a href="search skills.html">Search Skills</a></li>
+                    <li><a href="post any skills.html">Post any Skill</a></li>
+                    <li><a href="content.html">Content</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="features">
+        <div class="container">
+            <div class="feature-box">
+                <h3>Search Skills</h3>
+                <p>Find people with the skills you're looking for.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Offer Your Skill</h3>
+                <p>Highlight the skills you can share or the help you can provide.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Collaborate</h3>
+                <p>Start conversations and arrange personalized skill-swap meetings.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="image">
+        <img class="img1" src="skill swap.jpg" alt="">
+        <img class="img2" src="skills-3260624_1280.jpg" alt="">
+        <img class="img3" src="skilssss.jpg" alt="">
+    </div>
+
+    <div class="all-cards">
+        <div class="card">
+            <img class="img-card1" src="professional-network.png" alt="">
+            <h2>What is SkillSwap</h2>
+            <p>SkillSwap is a community-driven platform that enables people to exchange skills and knowledge without financial involvement.</p>
+        </div>
+
+        <div class="card">
+            <img class="img-card2" src="delegation.png" alt="">
+            <h2>How to do?</h2>
+            <p>To start a SkillSwap, first identify the skills you can offer and those you want to learn.</p>
+        </div>
+
+        <div class="card">
+            <img class="img-card3" src="sharing.png" alt="">
+            <h2>Importance of Skillswaping</h2>
+            <p>SkillSwap is valuable because it fosters a culture of collaborative learning, enabling people to gain skills they might not access otherwise.</p>
+        </div>
+    </div>
+
+    <section class="software-section">
+        <div class="container1">
+            <h1 class="h1">About This Software</h1>
+            <p class="p1">You have a skill. Maybe you're good at taking pictures, surfing, or teaching a language...</p>
+        </div>
+    </section>
+
+</body>
+</html

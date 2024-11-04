@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillSwapify-frontpage</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #72f6ff;
+            color: black;
+        }
+
+        /* Container */
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        header {
+            background-color: #055753;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            padding: 5px;
+        }
+
+        /* Section 1 */
+        .sec1 {
+            background-color: #0a9d9a;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .sec1 h2 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            position: relative;
+            animation-name: text1;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes text1 {
+            0% { left: 0; }
+            50% { left: 20px; }
+            100% { left: -20px; }
+        }
+
+        .sec1 p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            position: relative;
+            animation-name: text1;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+
+        .sec1 button {
+            padding: 15px 30px;
+            background-color: white;
+            color: #5c67f2;
+            border: none;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 5px;
+            box-shadow: 5px 5px black;
+            transition: background-color 0.3s;
+        }
+
+        .sec1 button:hover {
+            background-color: #4a55d4;
+            color: white;
+        }
+
+        /* Close Button */
+        .close-btn {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: red;
+            color: white;
+            border: none;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                padding: 30px 0;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .sec1 {
+                padding: 20px 0;
+            }
+
+            .sec1 h2 {
+                font-size: 1.5em;
+            }
+
+            .sec1 p {
+                font-size: 1em;
+            }
+
+            .sec1 button {
+                padding: 12px 25px;
+                font-size: 1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5em;
+            }
+
+            .sec1 h2 {
+                font-size: 1.2em;
+            }
+
+            .sec1 p {
+                font-size: 0.9em;
+            }
+
+            .sec1 button {
+                padding: 10px 20px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Close Button -->
+    <button class="close-btn" onclick="closePage()">X</button>
+
+    <header>
+        <div class="container">
+            <h1>SkillSwapify</h1>
+        </div>
+    </header>
+
+    <section class="sec1">
+        <div class="container">
+            <h2>Unlock opportunities & get the skill you want or offer yours to others!</h2>
+            <p>Partner with others, share what you know, and grow your expertise.</p>
+            <button id="startButton">Let's Start</button>
+        </div>
+    </section>
+
+    <script>
+        // Select button element
+        const startButton = document.getElementById('startButton');
+        
+        // Add a click event listener to the button
+        startButton.addEventListener('click', () => {
+            window.location.href = 'registration.html';
+        });
+       
+        // Close button function
+        function closePage() {
+            if (confirm("Are you sure you want to close this page?")) {
+                window.close();
+            }
+        }
+    </script>
+
+</body>
+</html>

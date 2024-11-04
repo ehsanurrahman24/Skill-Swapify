@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillSwap App</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #70516e;
+            color: black;
+        }
+
+        /* Container */
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        header {
+            background-color: #055753;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            padding: 5px;
+        }
+
+        /* Navigation */
+        nav ul {
+            list-style-type: none;
+            padding: 15px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            background-color: #05592b;
+            border: 2px solid black;
+        }
+
+        nav ul li {
+            text-align: center;
+            flex: 1;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            display: block;
+            padding: 10px 0;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+        }
+
+        .text-bar {
+            width: 250px;
+            height: 30px;
+            font-size: 1rem;
+            margin-right: 10px;
+        }
+
+        select {
+            padding: 5px;
+            font-size: 1rem;
+        }
+
+        /* Background image section */
+        .background-image {
+            background-image: url('skilssss.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 50vh;
+        }
+
+        /* Responsive styling */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .text-bar {
+                width: 200px;
+                height: 30px;
+                font-size: 0.9rem;
+            }
+
+            select {
+                width: 100%;
+                margin-top: 10px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .text-bar {
+                width: 80%;
+                margin: 10px 0;
+            }
+
+            nav ul li {
+                width: 100%;
+                text-align: center;
+            }
+
+            select {
+                width: 100%;
+            }
+
+            .background-image {
+                height: 40vh;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>SkillSwapify</h1>
+            <nav>
+                <ul>
+                    <li><a href="home project.html">Home</a></li>
+                    <li>
+                        <a href="search skills.html">Search Skills</a>
+                        <input class="text-bar" type="text" placeholder="search here">
+                        <label for="skills">Skills</label>
+                        <select name="skills" id="skills">
+                            <option value="C">C</option>
+                            <option value="C++">C++</option>
+                            <option value="Java">Java</option>
+                            <option value="Python">Python</option>
+                            <option value="JavaScript">JavaScript</option>
+                            <option value="CSS">CSS</option>
+                            <option value="HTML">HTML</option>
+                            <option value="Rush">Rush</option>
+                            <option value="Flutter">Flutter</option>
+                            <option value="React js">React js</option>
+                        </select>
+                    </li>
+                    <li><a href="post any skills.html">Post any Skill</a></li>
+                    <li><a href="content.html">Content</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="background-image"></div>
+</body>
+</html>

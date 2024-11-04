@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillSwap App</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #02180f;
+            color: rgb(243, 235, 235);
+        }
+
+        /* Container */
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        header {
+            background-color: #055753;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 50px;
+            padding: 5px;
+        }
+
+        /* Navigation */
+        nav ul {
+            list-style-type: none;
+            padding: 15px 0;
+            display: flex;
+            justify-content: space-around;
+            background-color: #044c24;
+            border: 2px solid black;
+        }
+
+        nav ul li {
+            text-align: center;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            display: block; 
+            padding: 10px 0;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+        }
+
+        /* Post container */
+        .post-container {
+            width: 300px;
+            text-align: center;
+            margin: 0 auto;
+            padding-top: 20px;
+        }
+
+        /* Text area */
+        textarea {
+            width: 90%;
+            max-width: 500px;
+            height: 200px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: none; 
+            margin-bottom: 10px;
+        }
+
+        /* Post button */
+        #postButton {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            background-color: #0795a8; 
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        /* Hover Post button */
+        #postButton:hover {
+            background-color: #136017;
+        }
+
+        .background-image {
+            background-image: url(picture2.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        /* Responsive Styling */
+        @media (max-width: 768px) {
+            header {
+                padding: 10px 0;
+            }
+
+            h1 {
+                font-size: 36px;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li a {
+                padding: 10px;
+                font-size: 18px;
+            }
+
+            /* Adjust textarea and post container */
+            .post-container {
+                width: 90%;
+            }
+
+            textarea {
+                width: 100%;
+                height: 200px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 28px;
+            }
+
+            nav ul li a {
+                font-size: 16px;
+            }
+
+            /* Smaller text area height for mobile */
+            textarea {
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>SkillSwapify</h1>
+            <nav>
+                <ul>
+                    <li><a href="home project.html">Home</a></li>
+                    <li><a href="search skills.html">Search Skills</a></li>
+                    <li><a href="post any skills.html">Post any Skill</a></li>
+                    <li><a href="content.html">Content</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="background-image">
+        <div class="post-container">
+            <h2>Share Your Skills:</h2>
+            <!-- Text area for the post content -->
+            <textarea id="postContent" placeholder="Write your post here..."></textarea>
+            <!-- Post button -->
+            <button id="postButton">Post</button>
+        </div>
+    </div>
+</body>
+</html>

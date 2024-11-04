@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillSwapify-content</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #70516e;
+            color: black;
+            padding: 10px;
+        }
+
+        /* Container */
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        header {
+            background-color: #055753;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: antiquewhite;
+            margin-bottom: 10px;
+        }
+
+        /* Navigation */
+        nav ul {
+            list-style-type: none;
+            padding: 10px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            background-color: #05592b;
+            border: 2px solid black;
+            margin-bottom: 20px;
+        }
+
+        nav ul li {
+            text-align: center;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            display: block;
+            padding: 10px 20px;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+        }
+
+        /* Content Sections */
+        .content-section {
+            background-color: #055753;
+            color: aliceblue;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 10px 0;
+        }
+
+        .content-section h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .content-section p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            nav ul li a {
+                font-size: 0.9rem;
+                padding: 8px 10px;
+            }
+
+            .content-section h1 {
+                font-size: 1.5rem;
+            }
+
+            .content-section p {
+                font-size: 0.95rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                padding: 0;
+            }
+
+            nav ul li {
+                width: 100%;
+            }
+
+            nav ul li a {
+                padding: 10px;
+                font-size: 1rem;
+            }
+
+            .content-section h1 {
+                font-size: 1.3rem;
+            }
+
+            .content-section p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>SkillSwapify</h1>
+            <nav>
+                <ul>
+                    <li><a href="home project.html">Home</a></li>
+                    <li><a href="search skills.html">Search Skills</a></li>
+                    <li><a href="post any skills.html">Post any Skill</a></li>
+                    <li><a href="content.html">Content</a></li>
+                </ul>
+            </nav>
+        </div> 
+    </header>
+
+    <div class="content-section">
+        <h1>C Programming</h1>
+        <p>C language, developed by Dennis Ritchie in the early 1970s, is a foundational programming language widely recognized for its efficiency, simplicity, and flexibility...</p>
+    </div>
+
+    <div class="content-section">
+        <h1>C++</h1>
+        <p>C++ is a powerful, versatile programming language developed by Bjarne Stroustrup in 1983 as an extension of C, adding object-oriented programming features...</p>
+    </div>
+
+    <div class="content-section">
+        <h1>Java</h1>
+        <p>Java is a widely-used, high-level programming language developed by Sun Microsystems in 1995. Renowned for its platform independence, Java follows the principle of "write once, run anywhere," meaning that code written in Java can run on any device equipped with a Java Virtual Machine (JVM)...</p>
+    </div>
+
+    <div class="content-section">
+        <h1>JavaScript</h1>
+        <p>JavaScript (JS) is a dynamic, high-level programming language primarily used for creating interactive and responsive web applications...</p>
+    </div>
+
+</body>
+</html>

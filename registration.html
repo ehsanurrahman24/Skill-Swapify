@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillSwapify</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #03828b;
+        }
+
+        /* Container */
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        header {
+            background-color: #2ac7bf;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+        }
+
+        /* Form container */
+        .div1 {
+            background-color: #0ac0dc;
+            width: 80%;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 2px solid black;
+            border-radius: 20px;
+        }
+
+        .data {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .name1, .name2, .name3 {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .name1 h2, .name2 h2, .name3 h2 {
+            flex: 0 0 120px;
+            font-size: 1.2rem;
+            margin-right: 10px;
+        }
+
+        .bar {
+            flex: 1;
+            padding: 10px;
+            font-size: 1rem;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+        }
+
+        /* Gender selection */
+        .gender-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .gender-container h2 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .gender-option {
+            display: inline-flex;
+            align-items: center;
+            margin-right: 15px;
+        }
+
+        .gender-option input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        .gender-option input[type="radio"]:checked + label {
+            background-color: #000;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        #submit {
+            display: block;
+            width: 100%;
+            max-width: 200px;
+            margin: 20px auto;
+            padding: 10px;
+            font-size: 1rem;
+            background-color: #035e6c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #submit:hover {
+            background-color: #022a32;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .div1 {
+                width: 90%;
+                padding: 15px;
+            }
+
+            .name1 h2, .name2 h2, .name3 h2 {
+                font-size: 1rem;
+            }
+
+            .gender-container h2 {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .name1, .name2, .name3 {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .name1 h2, .name2 h2, .name3 h2 {
+                margin-bottom: 5px;
+                font-size: 1rem;
+            }
+
+            .bar {
+                width: 100%;
+            }
+
+            #submit {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>SkillSwapify</h1>
+        </div>
+    </header>
+
+    <div class="div1">
+        <div class="data">
+            <div class="name1">
+                <h2>First Name:</h2>
+                <input class="bar" type="text">
+            </div>
+            <div class="name1">
+                <h2>Last Name:</h2>
+                <input class="bar" type="text">
+            </div>
+            <div class="name2">
+                <h2>Email:</h2>
+                <input class="bar" type="text">
+            </div>
+            <div class="name3">
+                <h2>Password:</h2>
+                <input class="bar" type="password" placeholder="Enter your password">
+            </div>
+            <div class="gender-container">
+                <h2>Select Your Gender</h2>
+                <div class="gender-option">
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                </div>
+                <div class="gender-option">
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                </div>
+                <div class="gender-option">
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other">Other</label>
+                </div>
+                <button id="submit">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('submit').addEventListener('click', () => {
+            window.location.href = 'login.html';
+        });
+    </script>
+
+</body>
+</html>
